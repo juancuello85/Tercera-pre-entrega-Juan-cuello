@@ -1,0 +1,21 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <h1>Frutas</h1>
+{% endblock contenido %}
+
+{% block titulo %}
+    Frutas
+{% endblock titulo %}
+
+{% block formulario %}
+<h2> Frutas </h2>
+<form action="" method="post">
+    {% csrf_token %}
+   <p>Nombre :<input type="text" name="nombre" id="nombre"></p>
+   <p>Tipo :<input type="text" name="tipo" id="tipo"></p>
+   <p>Tamaño :<input type="text" name="tamaño" id="tamaño"></p>
+   <input type="submit" value="Enviar">
+</form>
+{% endblock formulario %}
